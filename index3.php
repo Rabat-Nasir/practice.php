@@ -87,11 +87,77 @@ while($n <= 10){
     echo("The number is $n <br/>");
     $n++;
 }
+// Given password
+$password = 'user-input-pass';
 
+// Validate password strength
+$uppercase = preg_match('@[A-Z]@', $password);
+$lowercase = preg_match('@[a-z]@', $password);
+$number    = preg_match('@[0-9]@', $password);
+$specialChars = preg_match('@[^\w]@', $password);
 
+if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+}else{
+    echo 'Strong password.';
+    
+    
+    // if(isset($_POST['submit'])){
+    //     $percentage = $_POST['percentage'];
+    //     if($percentage <= 40){
+    //         echo "Fail";
+    //     }
+    //     else if($percentage <= 50){
+    //         echo "D-Grade";
+    //     }
+    //     else if($percentage <= 60){
+    //         echo "C-Grade";
+    //     }
+    //     else if($percentage <= 70){
+    //         echo "B-Grade";
+    //     }
+    //     else if($percentage <= 90){
+    //         echo "A-Grade";
+    //     }
+    //     else if($percentage <= 100){
+    //         echo "A+ Grade";
+    //     }
+    //     else{
+    //         echo "Invalid Percentage";
+    //     }
+        
 
+    // }
 
-
+// $lanuage = "java";
+// switch ($lanuage) {
+//     case 'c':
+//         echo "zunisha";
+//         break;
+    
+//         case 'php-8':
+//             echo "rabat";
+//             break;
+    
+//             case 'javascript':
+//                 echo "bisma";
+//                 break;
+    
+//                 case 'xml':
+//                     echo "safina";
+//                     break;
+                            
+//     default:
+//     echo"durr fitty muu..";
+//         break;
+// }
+// $n = 1;
+// while($n <= 10){
+//     echo("The number is $n <br/>");
+//     $n++;
+// }
+  
+}
 ?>
          
 
